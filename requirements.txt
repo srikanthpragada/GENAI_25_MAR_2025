@@ -1,0 +1,18 @@
+# Libraries required for HuggingFace and LangChain
+huggingface_hub
+transformers
+accelerate 
+bitsandbytes
+langchain
+langchain-huggingface
+langchain-core 
+langchain_community
+bs4 
+requests 
+faiss-cpu
+langchain-ollama 
+langchain-google-genai
+
+
+
+
