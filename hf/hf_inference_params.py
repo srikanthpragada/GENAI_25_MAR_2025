@@ -6,8 +6,8 @@ client = InferenceClient(model=model_id,
                          )
 
 response = client.text_generation(
-    "Who are the top 5 greatest footballers of all time? Just give names only",
-    temperature=0.5, 
-    frequency_penalty=1,
+    "Write a story about AI",
+    temperature=1.0, 
     max_new_tokens=200)
+
 print(response)
