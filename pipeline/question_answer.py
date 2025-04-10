@@ -14,7 +14,7 @@ result = query(question="Roberto Carlos is from which country?",
 
 print(result['answer'])
 
-# result = query(question="WHen Generative AI batch starts",
-#                context=context)  
+result = query(question="When Generative AI batch starts",
+               context=context)  
 
-# print(result['answer'])
+print(result['answer'])

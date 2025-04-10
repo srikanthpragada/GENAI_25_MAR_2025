@@ -6,5 +6,5 @@ result = classifier("I love iPad")
 print(result)
 
 result = classifier("I could not stand Mr. Tom")
-print(result[0]['label'], result[0]['score'])
+print(result)
            
