@@ -13,4 +13,4 @@ print("Loaded Documents", len(docs))
 # Print the loaded documents
 for doc in docs:
     print(doc.page_content[:50])  # Print the first 50 characters of each document
-    print("-" * 80)
+    print("-" * 50)
