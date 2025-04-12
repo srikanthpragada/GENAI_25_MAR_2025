@@ -1,10 +1,9 @@
-from langchain_community.embeddings import HuggingFaceInferenceAPIEmbeddings
-import keys 
+from langchain_huggingface import HuggingFaceEmbeddings
 
-embeddings_model = HuggingFaceInferenceAPIEmbeddings(
-    model_name="sentence-transformers/all-mpnet-base-v2",
-    api_key=keys.HUGGINGFACE_KEY
-)
+embeddings_model = HuggingFaceEmbeddings(
+    model_name='sentence-transformers/all-MiniLM-L6-v2')
+
+
 embeddings = embeddings_model.embed_documents(
     [
         "This is beautiful",

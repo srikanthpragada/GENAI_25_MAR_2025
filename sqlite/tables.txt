@@ -1,0 +1,24 @@
+create table courses
+(id  integer  primary key autoincrement,
+ title varchar(30) not null,
+ description varchar(200),
+ duration integer,
+ fee  integer,
+ prerequisite  varchar(50)
+ )
+
+
+
+insert into courses(title, description, duration, fee, prerequisite)
+  values('Python', 'This covers all concepts of Python Language and important libraries', 36,7500,'None');
+
+insert into courses(title, description, duration, fee, prerequisite)
+  values('DataScience', 'This teaches how to build machine learing models', 36, 10000,'Python');
+
+
+insert into courses(title, description, duration, fee, prerequisite)
+  values('Generative AI', 'This teaches how to get the best from LLM using Prompt Engineering, augment them using RAG and generate code using AI pair programming', 18, 10000,'Python');
+
+
+insert into courses(title, description, duration, fee, prerequisite)
+  values('Full-stack Web Development', 'This teaches how to develop a full-stack web application using Node and Express for backend and React for frontend', 36, 10000,'Programming Knowledge');
