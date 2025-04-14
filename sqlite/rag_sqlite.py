@@ -13,7 +13,7 @@ def get_courses():
     conn.close()
     return products
 
-def concate_course(course):
+def course_to_str(course):
     course_id, title, description, duration, fee, prerequisite = course
     return f"Title: {title}\nDescription: {description}\nFee: {fee}\nDuration: {duration}\nPrerequisite: {prerequisite}"
 
@@ -22,7 +22,7 @@ courses = get_courses()
 
 context = ""
 for course in courses:
-    context += concate_course(course) + "\n\n"
+    context += course_to_str(course) + "\n\n"
 
 #print(context)
 
@@ -44,7 +44,7 @@ prompt_value = prompt.format(context=context,
 repo_id = "mistralai/Mistral-7B-Instruct-v0.3"
 model = InferenceClient(repo_id, token=keys.HUGGINGFACEKEY, timeout=120)
 
-response = model.text_generation( prompt_value);
+response = model.text_generation(prompt_value)
 print(response)
 
 
