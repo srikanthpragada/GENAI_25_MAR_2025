@@ -1,5 +1,14 @@
 import sqlite3
-
+def get_total_credits(search_string):
+    """Return the total number of credits for courses matching the search string."""
+    with sqlite3.connect("courses.db") as conn:
+        cursor = conn.cursor()
+        cursor.execute("""
+            SELECT SUM(credits) FROM Courses
+            WHERE name LIKE ? OR description LIKE ?
+        """, (f"%{search_string}%", f"%{search_string}%"))
+        result = cursor.fetchone()
+        return result[0] if result[0] is not None else 0
 # filepath: c:\classroom\mar25\aipair\courses_crud.py
 
 def create_table():
@@ -65,3 +74,5 @@ if __name__ == "__main__":
     delete_course(2)
     print("Courses after deleting:")
     print(get_courses())
+
+    print()
